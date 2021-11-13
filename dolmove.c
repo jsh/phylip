@@ -17,7 +17,7 @@
 #define which           1
 
 typedef enum {
-  horiz, vert, up, overt, upcorner, downcorner, onne, zerro, question, polym
+  horiz, vert, up, overt, upcorner, downcorner, onne, zerro, question, polym, NumberOfTypes
 } chartype;
 
 typedef enum {  rearr, flipp, reroott, none } rearrtype;
@@ -77,9 +77,9 @@ Char *factor;
 // pointptr treenode;   // pointers to all nodes in tree
 double threshold;
 double *threshwt;
-unsigned char cha[(long)question - (long)horiz + 1];
-boolean reversed[(long)question - (long)horiz + 1];
-boolean graphic[(long)question - (long)horiz + 1];
+unsigned char cha[NumberOfTypes];
+boolean reversed[NumberOfTypes];
+boolean graphic[NumberOfTypes];
 howtree how;
 char *progname;
 char ch;
