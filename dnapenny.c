@@ -149,7 +149,7 @@ void dnapenny_tree_init(tree* t, long nonodes, long spp)
 } /* dnapennt_tree_init */
 
 
-void dnapenny_tree_setup(long nonodes, long spp)
+static void dnapenny_tree_setup(long nonodes, long spp)
 {
   /* create and initialize the necessary trees */
 
@@ -661,9 +661,9 @@ void addit(long m)
   placeptr bestplace;
   valptr valyew;
   placeptr place;
-  boolean multf;
+  boolean multf = false;
   boolean root=false;
-  node *dum, *qwhere;
+  node *dum, *qwhere = NULL;
   long n = 0;                           // RSGnote: Formerly not initialized and later potentially referenced before before being set.
 
   valyew = mvalyew[m-1];
