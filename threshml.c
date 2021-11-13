@@ -59,7 +59,7 @@ Char infilename[FNMLNGTH], outfilename[FNMLNGTH], intreename[FNMLNGTH], weightfi
 long inseed, inseed0;
 longer seed;
 boolean continuous, discrete, lengths, multrees, muldata, treeswithin, datawithin, cross, printdata, progress, firsttree, firstquad, nullchains;
-long spp1, chars, chars1, chars2, nonodes, nbranches, proposed, accepted, burnin, cycles, steps, fsteps, sumsteps, numtrees, ndatas, nextnode;
+long spp1, chars1, chars2, nonodes, nbranches, proposed, accepted, burnin, cycles, steps, fsteps, sumsteps, numtrees, ndatas, nextnode;
 long ith, ithwas, jth, jthwas, kth, sppwas, chars1was, chars2was;
 tree curtree;
 node *root;
@@ -1604,8 +1604,9 @@ int main(int argc, Char *argv[])
   FClose(outfile);
   FClose(infile);
   FClose(intree);
-  if (testing)
+  if (testing) {
     FClose(weightfile);
+  }
 #ifdef MAC
   fixmacfile(outfilename);
 #endif
