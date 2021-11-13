@@ -260,7 +260,7 @@ void inputoptions(void)
   /* input the information on the options */
   long i;
   scan_eoln(infile);
-  for (i = 0; i < chars; i++)
+  for (i = 0; i < chars; i++) {
     weight[i] = 1;
     if (ancvar)
         inputancestors(anczero0, ancone0);
@@ -273,6 +273,7 @@ void inputoptions(void)
         inputmixture(wagner0);
     if (weights)
       inputweights(chars, weight, &weights);
+  }
   putchar('\n');
   if (weights)
     printweights(stdout, 0, chars, weight, "Characters");
