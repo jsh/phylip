@@ -27,13 +27,7 @@ typedef void (*Slist_data_delete_t)(Slist_data_ptr *);
 static Slist_node_ptr Slist_node_new_(Slist_data_ptr data);
 static Slist_node_ptr Slist_node_new(Slist_data_ptr data);
 void Slist_node_delete(Slist_node_ptr ln);
-Slist_ptr Slist_new(void);
-void Slist_delete(Slist_ptr l);
 int _Slist_checklen(Slist_ptr l);
-int Slist_isempty(Slist_ptr l);
-void Slist_push(Slist_ptr l, Slist_data_ptr data);
-Slist_data_ptr Slist_pop(Slist_ptr l);
-void Slist_append(Slist_ptr l, Slist_data_ptr data);
 void Slist_delete_data(Slist_ptr l, Slist_data_delete_t delete_func);
 Slist_ptr Slist_new_fromarray(Slist_data_ptr obj[]);
 Slist_ptr Slist_copy(Slist_ptr l);
@@ -47,10 +41,6 @@ int main(void);
 
 /* Define this to include testing function main() */
 /* #define LIST_ADT_TEST */
-
-/* Private function prototypes */
-void Slist_node_delete(Slist_node_ptr ln);
-int  _Slist_checklen(Slist_ptr l);
 
 
 static Slist_node_ptr Slist_node_new_(Slist_data_ptr data)
