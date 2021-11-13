@@ -121,6 +121,7 @@ CFLAGS  = -g -Wall
 #
 # For some serious debugging using Gnu gcc:
 #CFLAGS=-g -Wall -Wmain -Wmissing-prototypes -Wreturn-type -Wstrict-prototypes -Wunused -Werror -Wredundant-decls -Waggregate-return -Wcast-align -Wcomment
+# N.B.: -Wall includes -Wmain, -Wreturn-type, -Wunused, -Wcomment, so these are redundant
 #
 # For Digital Alpha systems with Compaq Tru64 Unix
 # (however, be aware that this may cause floating-point problems in programs
@@ -130,6 +131,8 @@ CFLAGS  = -g -Wall
 # Optimized one for the IBM Visualage compiler for Linux or AIX on IBM pSeries
 #CFLAGS = -O -qmaxmem=-1 -qarch=auto -qtune=auto
 #
+# This checks everything from "serious debugging" above but -pedantic and -Wextra. The newest stable official standard is c17.
+CFLAGS := -g -std=c17 -Wall -Wmissing-prototypes -Wstrict-prototypes -Werror -Wredundant-decls -Waggregate-return -Wcast-align
 # ----------------------------------------------------------------------------
 #
 # This is the DFLAGS statement.  It specifies compiler behavior for the
