@@ -58,9 +58,7 @@ double  fracchange      = 1.0;
 
 double  freqa = 0.25, freqc = 0.25, freqg = 0.25, freqt = 0.25;
 
-long chars, datasets, ith, ctgry, categs;
-/* spp = number of species
-   chars = length of sequences */
+long datasets, ith, ctgry, categs;
 double cvi, xi, xv;
 boolean justwts, mulsets, firstset, lower;
 steptr oldweight;
