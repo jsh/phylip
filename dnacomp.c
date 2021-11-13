@@ -784,9 +784,8 @@ void maketree(void)
      then rearranges the tree for greatest "likelihood" */
   long i, j, k, numtrees, nextnode;
   boolean firsttree, goteof, haslengths, thorough = true;
-  node *item, *dummy;
+  node *item;
   boolean *names;
-  boolean multif;
 
   if (!usertree)
   {
