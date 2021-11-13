@@ -64,7 +64,7 @@ void dnapenny(char * infilename, char * outfilename, char * outfileopt,
 Char infilename[FNMLNGTH], outfilename[FNMLNGTH], outtreename[FNMLNGTH],
       weightfilename[FNMLNGTH];
 node *p;
-long chars, howmanny, howoften, col, msets, ith, nonodes = 0;
+long howmanny, howoften, col, msets, ith, nonodes = 0;
 boolean weights, thresh, simple, trout, progress, stepbox, ancseq, mulsets,
          firstset, justwts;
 double threshold, bestfound;
