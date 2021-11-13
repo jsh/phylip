@@ -529,8 +529,8 @@ void oldsavetree(tree* t, long *place)
         } while (q != p);     /*  topfork  is true if none are same lineage */
         if (topfork) {        /* if this fork is the top one in its lineage */
           hitforknum = hitlineage;
-          lineagenumber[p->index - 1] = -abs(hitforknum);  /* make negative */
-          place[i-1] = -abs(hitforknum);
+          lineagenumber[p->index - 1] = -labs(hitforknum);  /* make negative */
+          place[i-1] = -labs(hitforknum);
 /* printf("set fork %ld lineagenumber to %ld\n", p->index, lineagenumber[p->index-1]); debug */
         } else {                          /* going on down that lineage ... */
           place[i-1] = hitlineage;                       /* set place value */
@@ -1145,9 +1145,9 @@ void collapsebranch(tree* t, node* n)
     j = i;
     i = k;                                           /* ... it will be  i  */
   }
-  if ( (t->nodep[i-1] == n) )
+  if (t->nodep[i-1] == n)
     t->nodep[i-1] = n->next;
-  if ( (t->nodep[i-1] == m) )
+  if (t->nodep[i-1] == m)
     t->nodep[i-1] = m->next;
   t->nodep[j-1] = NULL;     /* debug: necessary? Done by release_forknode? */
   m->next = NULL;         /* set these disconnected nodes to point nowhere */
