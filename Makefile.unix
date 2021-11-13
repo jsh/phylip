@@ -228,6 +228,7 @@ SHARED := -shared
 
 # These for now, until we get this stuff debugged.
 BUILD_FAILURES := codml contml contrast dnamlk dnamove dolpenny fitch kitsch neighbor pars proml promlk protpars restml retree
+BUILD_FAILURES += draw2 drawgram drawinit drawtree
 PROGS := $(filter-out $(BUILD_FAILURES),$(PROGS))
 DYLIBS :=
 
