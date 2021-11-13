@@ -51,7 +51,7 @@ void dnacomp(char * infilename, char * intreename, char * OutfileName, char * ou
 
 Char infilename[FNMLNGTH], outfilename[FNMLNGTH], intreename[FNMLNGTH], outtreename[FNMLNGTH], weightfilename[FNMLNGTH];
 node *p;
-long chars, col, ith, njumble, jumb = 0, nonodes = 0, msets;
+long col, ith, njumble, jumb = 0, nonodes = 0, msets;
 long inseed, inseed0;
 boolean jumble, usertree, trout, weights, progress, stepbox, ancseq, firstset, mulsets, justwts;
 steptr oldweight, necsteps;
@@ -1338,8 +1338,9 @@ int main(int argc, Char *argv[])
 
   FClose(infile);
   FClose(outfile);
-  if (trout)
+  if (trout) {
     FClose(outtree);
+  }
 
 #ifdef MAC
   fixmacfile(outfilename);
