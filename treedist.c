@@ -1403,8 +1403,9 @@ int main(int argc, Char *argv[])
   FClose(intree);
   FClose(outfile);
 
-  if ((tree_pairing == ALL_IN_1_AND_2) || (tree_pairing == CORR_IN_1_AND_2))
+  if ((tree_pairing == ALL_IN_1_AND_2) || (tree_pairing == CORR_IN_1_AND_2)) {
     FClose(intree2);
+  }
 
   printf("Done.\n\n");
 
