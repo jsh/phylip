@@ -42,7 +42,7 @@ Char infilename[FNMLNGTH], outfilename[FNMLNGTH], intreename[FNMLNGTH],
       outtreename[FNMLNGTH], weightfilename[FNMLNGTH];
 char basechar[32]="ACMGRSVTWYHKDBNO???????????????";
 long jumb = 0, nonodes = 0;
-long spp, chars, col, msets, ith, njumble;
+long col, msets, ith, njumble;
 /*   chars = number of sites in actual sequences */
 long inseed, inseed0;
 double threshold, bestfound;
