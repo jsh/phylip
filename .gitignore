@@ -1,15 +1,16 @@
 # files generated during build
+*.app
+*.dylib
+*.jar
 *.o
 *.so
-*.dylib
-PhylipExec
-exe
-*.jar
-*.app
+PhylipExec/
+exe/
 # miscellaneous generated or constructed files
-CVS
-fork
 *_
+CVS/
+contrast0
+fork
 outfile
 outtree
 # executables
