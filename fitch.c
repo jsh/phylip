@@ -45,7 +45,6 @@ void   initfitchnode(tree *, node **, long, long, long *, long *, initops,
 void   fitch_setupnewfork(tree *, long);
 void   fitch_buildsimpletree(tree *, long);
 void   rearrange(node *, long *, long *, boolean *);
-node*  findroot(tree *, node *, boolean *);
 void   describe(node *);
 void   summarize(long);
 void   nodeinit(node *);
