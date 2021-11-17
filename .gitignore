@@ -1,19 +1,25 @@
 # files generated during build
+# generated file types
 *.app
 *.dylib
 *.jar
 *.o
 *.so
+
+# directories generated during builds
 PhylipExec/
 exe/
-# miscellaneous generated or constructed files
+
+# miscellaneous relic files
+# generated or constructed earlier in the project
 *_
 CVS/
 contrast0
 fork
 outfile
 outtree
-# executables
+
+# individual generated executables
 clique
 codml
 consense
