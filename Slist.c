@@ -28,15 +28,15 @@ static Slist_node_ptr Slist_node_new_(Slist_data_ptr data);
 static Slist_node_ptr Slist_node_new(Slist_data_ptr data);
 void Slist_node_delete(Slist_node_ptr ln);
 int _Slist_checklen(Slist_ptr l);
-void Slist_delete_data(Slist_ptr l, Slist_data_delete_t delete_func);
-Slist_ptr Slist_new_fromarray(Slist_data_ptr obj[]);
-Slist_ptr Slist_copy(Slist_ptr l);
-Slist_ptr Slist_copy_deep(Slist_ptr l, Slist_data_copy_t copy_func);
-Slist_iter_ptr Slist_begin(Slist_ptr l);
-void * Si_next(Slist_iter_ptr iter);
+// void Slist_delete_data(Slist_ptr l, Slist_data_delete_t delete_func);
+// Slist_ptr Slist_new_fromarray(Slist_data_ptr obj[]);
+// Slist_ptr Slist_copy(Slist_ptr l);
+// Slist_ptr Slist_copy_deep(Slist_ptr l, Slist_data_copy_t copy_func);
+// Slist_iter_ptr Slist_begin(Slist_ptr l);
+// void * Si_next(Slist_iter_ptr iter);
 void nobj_delete(void **nobj_ptr);
 void *nobj_copy(void *nobj);
-int main(void);
+// int main(void);
 #endif
 
 /* Define this to include testing function main() */
@@ -325,8 +325,8 @@ void *nobj_copy(void *nobj)
 int main(void)
 {
   /* main program for running standalone to test */
-  Slist          l, m;
-  Slist_iter iter;
+  Slist_ptr          l, m;
+  Slist_iter_ptr iter;
   int *data;
   int           n[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
   Slist_data_ptr        nobj[11];
@@ -358,7 +358,7 @@ int main(void)
   printf("\n");
 
   printf("Deleting list...\n");
-  Slist_delete(&l);
+  Slist_delete(l);
 
   printf("Slist pointer is %p\n", l);
 
@@ -370,7 +370,7 @@ int main(void)
   {
     printf("%d ", *((int *)Slist_pop(l)));
   }
-  Slist_delete(&l);
+  Slist_delete(l);
   printf("\n");
   printf("Creating again...\n");
   l = Slist_new_fromarray(nobj);
@@ -382,7 +382,7 @@ int main(void)
   printf("Deleting l...\n");
   while( !Slist_isempty(l) )
     Slist_pop(l);
-  Slist_delete(&l);
+  Slist_delete(l);
 
   printf("Iterating list m...\n");
   iter = Slist_begin(m);
@@ -398,7 +398,7 @@ int main(void)
 
 
   printf("Deleting m with object destructor...\n");
-  Slist_delete_data(&m, nobj_delete);
+  Slist_delete_data(m, nobj_delete);
   printf("Slist pointer is %p\n", l);
   printf("Done.\n");
 
