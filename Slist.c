@@ -17,6 +17,10 @@
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
+
+/* Define this to include testing function main() */
+/* #define LIST_ADT_TEST */
+
 #include "Slist.h"
 
 typedef struct _Slist_iter* Slist_iter_ptr;
@@ -38,10 +42,6 @@ void nobj_delete(void **nobj_ptr);
 void *nobj_copy(void *nobj);
 // int main(void);
 #endif
-
-/* Define this to include testing function main() */
-/* #define LIST_ADT_TEST */
-
 
 static Slist_node_ptr Slist_node_new_(Slist_data_ptr data)
 { /* Slist_node constructor which can even accept NULL data,

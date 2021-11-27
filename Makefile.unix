@@ -322,7 +322,7 @@ clean:
 	@echo "may terminate with an error message but this is not a problem.)"
 	@echo ""
 	@echo "Removing executables from this directory."
-	@rm -f $(PROGS)
+	@rm -f $(PROGS) Slist
 	@echo ""
 	@echo "Finished cleanup."
 
@@ -520,8 +520,8 @@ treedist.o:   treedist.c cons.h phylip.h
 #
 
 
-Slist: Slist.c Slist.h $(LIBS)
-	rm -f Slist.o; $(CC) -DLIST_ADT_TEST $< $(SHARED) -fPIC $(LDADD) -o $@
+Slist: Slist.c Slist.h
+	$(CC) -DLIST_ADT_TEST $< -fPIC $(LDADD) -o $@
 
 clique:       clique.o disc.o $(LIBS)
 	$(CC) $^ $(LDADD) -o $@
