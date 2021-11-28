@@ -41,6 +41,14 @@ all:    introduce $(PROGS) $(DYLIBS)
 	@echo "Did not try to build programs:"
 	@printf "\t$(BUILD_FAILURES)\n"
 
+all-objects: $(OBJS)
+	@echo ""
+	@echo "Successfully built object files:"
+	@printf "\t$(OBJS)\n"
+	@echo ""
+	@echo "Did not try to build object files:"
+	@printf "\t$(COMPILE_FAILURES)\n"
+
 introduce:
 	@echo ""
 	@echo "Building PHYLIP version 4.0."

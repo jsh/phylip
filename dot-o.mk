@@ -5,3 +5,4 @@ COMPILE_FAILURES += dumptree.o interface.o kitsch.o macface.o neighbor.o newmove
 COMPILE_FAILURES += prom_common.o proml.o promlk.o protpars.o restml.o restore.o retree.o usertree.o
 OBJS := $(filter-out $(COMPILE_FAILURES),$(OBJS))
 
+all-objects: $(OBJS)
