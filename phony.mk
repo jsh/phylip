@@ -91,5 +91,5 @@ clean:
 	@echo "Finished cleanup."
 
 distclean:
-	git clean -dfx
-	git reset --hard
+	@git clean -dfx
+	@git reset --hard -q
