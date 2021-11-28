@@ -4,7 +4,7 @@
 
 # These targets do not produce a file of their namesake, so tell make not
 # to bother looking:
-.PHONY: help all introduce put clean install
+.PHONY: help all introduce put clean install distclean
 
 #
 #  The first target it executed if you just type "make".  It tells you how to use the Makefile.
@@ -82,3 +82,5 @@ clean:
 	@echo ""
 	@echo "Finished cleanup."
 
+distclean:
+	git clean -dfx
