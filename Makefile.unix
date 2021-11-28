@@ -43,7 +43,7 @@ include proglist.mk
 include phony.mk
 include dot-o.mk
 include progs.mk
-include shared-libs.mk
+# include shared-libs.mk
 include depend.mk
 
 # End.

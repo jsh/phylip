@@ -1,6 +1,11 @@
 
 # Dynamic libraries (.so)
 
+DYLIBS := libclique.so libconsense.so libcontml.so libdnacomp.so libdnadist.so libdnainvar.so
+DYLIBS += lidnaml.so libdnapars.so libdnapenny.so libdollop.so libdolpenny.so libdrawgram.so
+DYLIBS += libdrawtree.so libfactor.so libgendist.so libmix.so libneighbor.so libpars.so libpenny.so
+DYLIBS += libprotpars.so libproml.so libprotdist.so librestdist.so libseqboot.so libtreedist.so
+
 libclique.so:   clique.o disc.o phylip.h $(LIBS)
 	$(CC) $(CFLAGS) -o libclique.so $(SHARED) -fPIC clique.c disc.c phylip.c
 
