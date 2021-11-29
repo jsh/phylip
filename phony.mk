@@ -77,8 +77,8 @@ pre-clean:
 
 clean:
 	@echo ""
-	@echo "Removing object files to save space."
-	@rm -f *.o
+	@echo "Removing object files and libraries to save space."
+	@rm -f *.[oa]
 	@echo ""
 	@echo "Finished removing object files.  Now will remove"
 	@echo "executable files from the current directory, but not from the"

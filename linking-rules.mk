@@ -1,8 +1,8 @@
 # Rules for linking
 
-$(DRAW_PROGS) : % : %.o
-	$(DC) $(DLIBS) $^ $(LDADD) -o $@
 
-$(OTHER_PROGS) : % : %.o
-	$(CC) $^ $(LDADD) -o $@
-
+$(OTHER_PROGS) : % : %.o | libphylip.a
+	$(LINK.c) $^ -L. $(LDLIBS) -o $@
+	
+$(DRAW_PROGS) : % : %.o | libphylip.a
+	$(LINK.draw) $^ -L. $(LDLIBS) -o $@

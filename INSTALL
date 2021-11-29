@@ -1,0 +1,16 @@
+The PHYLIP build assumes you are using GNU make.
+
+The default build should just work if you type "make".
+For other things you can build from this distribution, type "make help"
+
+To change the default options for the build,
+or create a build for a new kind of system,
+you will need to modify system.mk.
+Notes on how to do that can be found in Note.customize-build
+
+The compressed tar archive phylip.tar.Z when uncompressed and extracted
+puts the source code into a directory ./src, and also makes two other
+directories ./exe and ./doc for the final executables and the documentation
+files.
+
+If you want something different from that structure, change EXEDIR.
