@@ -1,3 +1,16 @@
+## Rules for linking
+
+$(OTHER_PROGS) : % : %.o | libphylip.a
+	$(LINK.c) $^ -L. $(LDLIBS) -o $@
+	
+$(DRAW_PROGS) : % : %.o | libphylip.a
+	$(LINK.draw) $^ -L. $(LDLIBS) -o $@
+
+## Rules for libraries
+%.a:
+	ar -rcs $@ $^
+
+## Rules for C-source dependency generation
 # This is lifted from http://make.mad-scientist.net/papers/advanced-auto-dependency-generation/
 
 DEPDIR := .deps

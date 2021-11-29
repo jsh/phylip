@@ -80,7 +80,7 @@ clean:
 	echo "Removing object files and libraries to save space."
 	rm -f *.[oa]
 	echo
-	echo "Finished removing object files.  Now will remove"
+	echo "Finished removing objects files and libraries.  Now will remove"
 	echo "executable files from the current directory, but not from the"
 	echo "executables directory.  (If some are not here, the makefile"
 	echo "may terminate with an error message but this is not a problem.)"

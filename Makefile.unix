@@ -5,15 +5,13 @@
 
 SHELL := $(shell which bash)  # almost seems recursive, but it's not :-)
 
-include system.mk                       # how the make is customized for different systems
+include system.mk                       # customze the make for your system
 include proglist.mk                     # variables holding lists of all programs and important subsets
 include phony.mk                        # phony targets, like "make help," that aren't actually files
 include vars.mk                         # important high-level variables for the build
 include dot-o.mk                        # variables holding lists of all object files and important subsets
-include library.mk                      # how to make the local library
-include progs.mk                        # dependencies of every executable
+include progs.mk                        # list dependencies of each executable
 # include shared-libs.mk
-include linking-rules.mk                # how to link objects and libraries to make programs
-include compiling-rules.mk              # how to compile source files into objects
+include pattern-rules.mk                # general rules for figuring out dependencies, and for making libraries and executables
 
 # End.

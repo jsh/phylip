@@ -1,9 +1,10 @@
 #
-# Link the individual programs.
+# Link the libraries and programs.
 #
 #progs: all
 #	for i in $(RUNS); do yes Q | ./$$i &> /dev/null || echo $$i fails; done
 
+libphylip.a:  Slist.o phylip.o
 clique:       clique.o disc.o 
 codml:        codml.o ml.o seq.o 
 consense:     consense.o cons.o 
