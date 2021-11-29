@@ -44,6 +44,7 @@ include phony.mk
 include dot-o.mk
 include progs.mk
 # include shared-libs.mk
-include depend.mk
+include linking-rules.mk
+include compiling-rules.mk
 
 # End.
