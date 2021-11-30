@@ -13,10 +13,6 @@
 # The following specifies the directory where the executables will be placed:
 EXEDIR = ../exe
 #
-# The following fetches the name of the Unix or Linux shell
-#
-UNAME := $(shell uname)
-#
 # ----------------------------------------------------------------------------
 #
 # The following statements set these variables:
@@ -55,7 +51,7 @@ UNAME := $(shell uname)
 # If these statements say "-g"  and that causes trouble, remove the "-g".
 # If the "-lX11" does not work (X compiling not working), you may want to
 # remove that switch or fix it.
-#
+
 # Here are some possible CFLAGS statements:
 #
 # A minimal one:
