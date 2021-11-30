@@ -33,7 +33,7 @@ help:
 	echo "                            executables directory (e.g. "mv dnaml $(EXEDIR)")"
 	echo "                            Note that the program name should be lower case."
 
-all:    introduce $(PROGS) $(DYLIBS)
+all:    introduce $(PROGS)
 	echo
 	echo "Successfully built programs:"
 	printf "\t$(PROGS)\n"

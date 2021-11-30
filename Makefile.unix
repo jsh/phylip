@@ -11,7 +11,6 @@ include phony.mk                        # phony targets, like "make help," that 
 include vars.mk                         # important high-level variables for the build
 include dot-o.mk                        # variables holding lists of all object files and important subsets
 include progs.mk                        # list dependencies of each executable
-# include shared-libs.mk
 include pattern-rules.mk                # general rules for figuring out dependencies, and for making libraries and executables
 
 # End.
