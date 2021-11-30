@@ -1,5 +1,5 @@
 #
-# Link the libraries and programs.
+# Dependencies for libraries and programs
 #
 #progs: all
 #	for i in $(RUNS); do yes Q | ./$$i &> /dev/null || echo $$i fails; done
