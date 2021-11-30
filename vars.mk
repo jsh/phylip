@@ -8,7 +8,7 @@
 #    LINK.c -- default command to link C programs
 
 ## Modifications to standard make variables
-# For COMPILE.c, see compiling-rules.mk
+# For modifications to COMPILE.c, see pattern-rules.mk
 CFLAGS += -g -Wall
 LDLIBS += -lm -lphylip
 
