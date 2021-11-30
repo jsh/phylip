@@ -9,6 +9,7 @@
 
 ## Modifications to standard make variables
 # For COMPILE.c, see compiling-rules.mk
+CFLAGS += -g -Wall
 LDLIBS += -lm -lphylip
 
 ## These variables are particular to PHYLIP
@@ -20,8 +21,8 @@ LDLIBS += -lm -lphylip
 #    COMPILE.draw -- command to compile draw programs
 #    LINK.draw -- command to link draw programs
 
-EXEDIR = ../exeCFLAGS  += -g -Wall
-DFLAGS = -DX $(CFLAGS) -I/usr/X11R6/include
+EXEDIR := ../exe
+DFLAGS := -DX $(CFLAGS) -I/usr/X11R6/include
 DLIBS := -L/usr/X11R6/lib/ -lX11 -lXt
-COMPILE.draw = $(COMPILE.c) $(DFLAGS)
+COMPILE.draw := $(COMPILE.c) $(DFLAGS)
 LINK.draw := $(LINK.c) $(DFLAGS) $(DLIBS)
