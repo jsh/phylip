@@ -1,6 +1,6 @@
 # Building PHYLIP
 
-The PHYLIP 4.0 build assumes you are using GNU make.
+The PHYLIP build assumes you are using GNU make.
 
 For the things you can build from this distribution, type `make`
 The default build should just work if you type `make all`.

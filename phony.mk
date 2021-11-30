@@ -11,7 +11,7 @@
 #
 help:
 	echo
-	echo " To use the PHYLIP v4.0 Makefile, type:"
+	echo " To use the PHYLIP $(VERSION) Makefile, type:"
 	echo
 	echo "     make install           to compile the whole package and install"
 	echo "                            the executables in $(EXEDIR), and then"
@@ -51,7 +51,7 @@ all-objects: $(OBJS)
 
 introduce:
 	echo
-	echo "Building PHYLIP version 4.0."
+	echo "Building PHYLIP $(VERSION)."
 
 install: pre-clean all put clean
 	echo
@@ -59,7 +59,7 @@ install: pre-clean all put clean
 
 put:
 	echo
-	echo "Installing PHYLIP v4.0 binaries in $(EXEDIR)."
+	echo "Installing PHYLIP $(VERSION) binaries in $(EXEDIR)."
 	mkdir -p $(EXEDIR)
 	mv $(PROGS) $(EXEDIR)
 	echo

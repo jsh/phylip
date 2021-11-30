@@ -21,6 +21,10 @@ LDLIBS += -lm -lphylip
 #    COMPILE.draw -- command to compile draw programs
 #    LINK.draw -- command to link draw programs
 
+# TODO: This should be a tag, not hardwired, and use semantic versioning.
+# VERSION := $(shell git describe)
+VERSION := v4.0
+
 EXEDIR := ../exe
 DFLAGS := -DX $(CFLAGS) -I/usr/X11R6/include
 DLIBS := -L/usr/X11R6/lib/ -lX11 -lXt
