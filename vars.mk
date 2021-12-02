@@ -12,6 +12,12 @@
 CFLAGS += -g -Wall
 LDLIBS += -lm -lphylip
 
+## Mods that should only be needed when we begin building shared libs.
+ifdef SHLIBS
+CFLAGS += -fPIC -shared
+# TODO: In the original Makefile.unix, dnamove.c, dolmove.c move.c moves.c retree.c never take these added flags.Should they?
+endif
+
 ## These variables are particular to PHYLIP
 
 #    EXEDIR -- directory where the executables will be placed
